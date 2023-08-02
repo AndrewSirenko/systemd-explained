@@ -5,5 +5,7 @@ RUN apt-get update && \
 
 RUN rm -rf /lib/systemd/system/* /etc/systemd/system/*
 
+COPY default.target /lib/systemd/system/
+
 CMD ["/lib/systemd/systemd"]
 
